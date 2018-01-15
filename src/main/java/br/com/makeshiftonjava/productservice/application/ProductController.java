@@ -17,7 +17,7 @@ public class ProductController {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ResponseEntity<Product> retrieveProduct(@PathVariable Long id) {
-        LOG.info("/reviews called, processing time: {}");
-        return ResponseEntity.ok(new Product("Teste"));
+        LOG.info("/products called");
+        return ResponseEntity.ok(new Product(id, "Teste"));
     }
 }
